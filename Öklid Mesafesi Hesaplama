@@ -1,0 +1,29 @@
+import math
+
+pointList = [((1,1), (5,4)),((1,1),(13,6))]
+
+def euclideanDistance(x1Coordinate, x2Coordinate, y1Coordinate, y2Coordinate):
+    #result = math.sqrt(((x2Coordinate - x1Coordinate)**2) + ((y2Coordinate - y1Coordinate)**2))
+    result = ((((x2Coordinate - x1Coordinate)**2) + ((y2Coordinate - y1Coordinate)**2)))**(1/2)
+
+    return result
+
+
+distance = []
+durum = 0
+while(durum < len(pointList)):
+    x1Point = pointList[durum][0][0]
+    y1Point = pointList[durum][0][1]
+    x2Point = pointList[durum][1][0]
+    y2Point = pointList[durum][1][1]
+    
+    distance.append(euclideanDistance(x1Point, x2Point, y1Point, y2Point))
+    durum +=1
+
+    
+    
+
+for x in distance:
+    print(str(x))
+
+print("\nMinumum Value: "+ str(min(distance)))
