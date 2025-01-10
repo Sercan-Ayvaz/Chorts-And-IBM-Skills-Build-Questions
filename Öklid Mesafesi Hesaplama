@@ -10,15 +10,15 @@ def euclideanDistance(x1Coordinate, x2Coordinate, y1Coordinate, y2Coordinate):
 
 
 distance = []
-durum = 0
-while(durum < len(pointList)):
+baslangicDeğeri = 0
+while(baslangicDeğeri < len(pointList)):
     x1Point = pointList[durum][0][0]
     y1Point = pointList[durum][0][1]
     x2Point = pointList[durum][1][0]
     y2Point = pointList[durum][1][1]
     
     distance.append(euclideanDistance(x1Point, x2Point, y1Point, y2Point))
-    durum +=1
+    baslangicDeğeri +=1
 
     
     
